@@ -36,14 +36,18 @@ O Desafio do Exercício: O objetivo era substituir um código manual e repetitiv
 
 Competências Testadas e Aplicadas:
 
-**Automação com Laços (for):** Teste de lógica para geração de tabelas em série, reduzindo drasticamente o volume de linhas de código.
+**Automação com Laços (for):** 
+* Teste de lógica para geração de tabelas em série, reduzindo drasticamente o volume de linhas de código.
 
-**Refatoração para Clean Code:**  Substituição de variáveis genéricas por nomes significativos.
+**Refatoração para Clean Code:**  
+* Substituição de variáveis genéricas por nomes significativos.
 
 **Criação de funções com responsabilidade única (Modularização).**
 
 **Uso de #define para eliminar "números mágicos", facilitando a manutenção do teste.**
 
-**Portabilidade (Diretivas de Pré-processamento):** Implementação de #ifdef _WIN32 para validar o comportamento do programa em múltiplos ambientes, corrigindo o erro comum de comandos de sistema não encontrados.
+**Portabilidade (Diretivas de Pré-processamento):**
+* Implementação de #ifdef _WIN32 para validar o comportamento do programa em múltiplos ambientes, corrigindo o erro comum de comandos de sistema não encontrados.
 
-**Interface vs. Lógica:** Separação da lógica matemática da função de exibição, um princípio fundamental da engenharia de software.
+**Interface vs. Lógica:** 
+* Separação da lógica matemática da função de exibição, um princípio fundamental da engenharia de software.

@@ -41,8 +41,8 @@ Competências Testadas e Aplicadas:
 
 **Refatoração para Clean Code:**  
 * Substituição de variáveis genéricas por nomes significativos.
-
-**Criação de funções com responsabilidade única (Modularização).**
+* 
+*Criação de funções com responsabilidade única (Modularização).*
 
 **Uso de #define para eliminar "números mágicos", facilitando a manutenção do teste.**
 

@@ -24,3 +24,26 @@ Este repositório é meu **laboratório de engenharia**. Aqui documento comporta
 * **Foco do Exercício:** * **Normalização de Dados:** Converter horas e minutos para uma unidade única (minutos totais) para simplificar cálculos de intervalo.
     * **Tratamento de Exceções:** Lógica para lidar com a "virada de dia" (quando o veículo entra às 23h e sai às 01h).
     * **Regras de Cobrança:** Implementação de arredondamento
+
+
+## 📂 Exercícios de Lógica e Fundamentos
+🌡️**Estudo de Caso:** Conversor de Temperatura Automatizado
+**Status:** Exercício de Refatoração e Lógica Aplicada.
+
+Este projeto foi desenvolvido como um exercício prático para aplicar técnicas avançadas de programação em C, evoluindo um algoritmo simples de conversão para uma estrutura profissional e robusta.
+
+O Desafio do Exercício: O objetivo era substituir um código manual e repetitivo por uma solução automatizada que resolvesse problemas de compatibilidade entre sistemas operacionais (Windows/Linux).
+
+Competências Testadas e Aplicadas:
+
+**Automação com Laços (for):** Teste de lógica para geração de tabelas em série, reduzindo drasticamente o volume de linhas de código.
+
+**Refatoração para Clean Code:**  Substituição de variáveis genéricas por nomes significativos.
+
+**Criação de funções com responsabilidade única (Modularização).**
+
+**Uso de #define para eliminar "números mágicos", facilitando a manutenção do teste.**
+
+**Portabilidade (Diretivas de Pré-processamento):** Implementação de #ifdef _WIN32 para validar o comportamento do programa em múltiplos ambientes, corrigindo o erro comum de comandos de sistema não encontrados.
+
+**Interface vs. Lógica:** Separação da lógica matemática da função de exibição, um princípio fundamental da engenharia de software.

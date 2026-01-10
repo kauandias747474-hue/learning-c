@@ -50,3 +50,44 @@ Competências Testadas e Aplicadas:
 
 **Interface vs. Lógica:** 
 * Separação da lógica matemática da função de exibição, um princípio fundamental da engenharia de software.
+
+* ## 🛡️ Módulos de Cibersegurança e Engenharia Reversa
+
+### 4. [Gestão Segura de Memória e Wiping](./04_memory_safety_wiping.c)
+* **O que o código faz:** Implementa alocação dinâmica com limpeza obrigatória de rastros na RAM.
+* **Estudo Técnico: Mitigação de Memory Dump**
+    * **Wiping:** Uso de `memset(ptr, 0, size)` antes do `free()` para apagar dados sensíveis, evitando que informações permaneçam na memória após o encerramento do programa (ataques de Cold Boot).
+    * **Anti-Dangling:** Anulação imediata do ponteiro (`ptr = NULL`) após a liberação para prevenir vulnerabilidades de acesso a endereços inválidos.
+
+
+
+### 5. [Motor de Criptografia XOR & Binary I/O](./05_xor_crypto_engine.c)
+* **O que o código faz:** Cifrador simétrico de alta performance que processa arquivos byte a byte.
+* **Estudo Técnico: Manipulação Bruta de Bits (Bitwise)**
+    * **Simetria XOR:** Aplicação do operador `^` para criptografia rápida em nível de hardware.
+    * **Integridade Binária:** Diferenciação entre os modos `"r"` e `"rb"` para garantir que o compilador não corrompa bytes de arquivos não-texto (como imagens e chaves).
+
+
+
+---
+
+## 🏗️ Arquitetura e Padrões Profissionais (Clean Code)
+
+### 6. [Encapsulamento com Opaque Pointers](./06_opaque_pattern/)
+* **Estudo Técnico: Princípio do Menor Conhecimento (Lei de Demeter)**
+    * **O que aprendi:** Como esconder a definição de uma `struct` no arquivo `.c` e expor apenas a interface no `.h`. Isso impede o acoplamento excessivo e protege a lógica interna contra interferências externas.
+
+
+
+### 7. [Resiliência: Tratamento de Sinais de Sistema](./07_signal_handling_resilience.c)
+* **Estudo Técnico: Graceful Shutdown (Fechamento Elegante)**
+    * **O que aprendi:** Uso da biblioteca `<signal.h>` para capturar interrupções (`Ctrl+C`) e garantir que o programa execute rotinas de limpeza de RAM e fechamento de arquivos antes de encerrar.
+
+
+
+---
+
+## 🛠 Diferenciais Aplicados nestes Estudos
+* **Early Return:** Tratamento de erros no início das funções para manter o código linear e evitar aninhamentos excessivos.
+* **Memory Safety:** Foco rigoroso na prevenção de *Buffer Overflows* e *Memory Leaks*.
+* **Interoperabilidade:** Uso de `__attribute__((packed))` em structs para garantir compatibilidade de memória em integrações com outras linguagens (JNI/Java).

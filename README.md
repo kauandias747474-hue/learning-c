@@ -101,3 +101,22 @@ Competências Testadas e Aplicadas:
 **Interface vs. Lógica:** 
 
 * Separação da lógica matemática da função de exibição, um princípio fundamental da engenharia de software.
+
+## 📂 Destaques de Aprendizado (Novos Módulos)
+
+Abaixo estão os detalhes sobre os três últimos tópicos que implementei:
+
+### 1. Criptografia de Arquivos (Cifra XOR)
+- **O que faz:** Utiliza a operação lógica `^` (XOR) para processar bytes de um arquivo e gerar uma versão cifrada.
+- **Conceito:** Manipulação de arquivos (`FILE*`), leitura binária (`rb/wb`) e operações bitwise.
+- **Localização:** `05-arquivos-e-bits/cifra_xor.c`
+
+### 2. Gerenciamento de Memória (Vault)
+- **O que faz:** Cria uma estrutura de dados "cofre" (Vault) usando alocação dinâmica.
+- **Conceito:** Uso de `malloc` para reservar memória na **Heap**, ponteiros para structs e a importância do `free` para evitar *memory leaks*.
+- **Localização:** `04-alocacao-dinamica/vault_malloc.c`
+
+### 3. Resiliência e Sinais do Sistema
+- **O que faz:** Intercepta o sinal de interrupção do teclado (Ctrl+C) para realizar uma limpeza de emergência antes de fechar o programa.
+- **Conceito:** Uso da biblioteca `<signal.h>`, tratamento de interrupções e programação de sistemas.
+- **Localização:** `06-sistemas/signal_handling.c`

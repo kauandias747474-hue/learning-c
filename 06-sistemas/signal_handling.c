@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <signal.h> // Biblioteca para lidar com sinais do SO
-#include <unistd.h> // Para a funcao sleep
+#include <signal.h> 
+#include <unistd.h> 
 
-// Funcao que sera chamada quando o sinal for detectado
 void tratar_interrupcao(int sinal) {
     printf("\n\n[ALERTA] Sinal %d (SIGINT) recebido!\n", sinal);
     printf("Realizando limpeza de emergencia nos buffers...\n");
@@ -13,7 +12,6 @@ void tratar_interrupcao(int sinal) {
 }
 
 int main() {
-    // Registra o tratador de sinal: Se receber SIGINT (Ctrl+C), chame minha funcao
     signal(SIGINT, tratar_interrupcao);
 
     printf("--- MONITOR DE SISTEMA RESILIENTE ---\n");

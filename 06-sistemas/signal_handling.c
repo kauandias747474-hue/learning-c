@@ -8,7 +8,7 @@ void tratar_interrupcao(int sinal) {
     printf("Realizando limpeza de emergencia nos buffers...\n");
     printf("Fechando conexoes de seguranca...\n");
     printf("Programa encerrado corretamente.\n");
-    exit(0); // Sai do programa de forma limpa
+    exit(0); 
 }
 
 int main() {
@@ -20,7 +20,7 @@ int main() {
 
     while(1) {
         printf("Processando dados... (aguardando interrupcao)\n");
-        sleep(2); // Espera 2 segundos
+        sleep(2);
     }
 
     return 0;

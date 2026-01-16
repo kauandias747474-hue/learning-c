@@ -102,6 +102,43 @@ Competências Testadas e Aplicadas:
 
 * Separação da lógica matemática da função de exibição, um princípio fundamental da engenharia de software.
 
+* ## 🚀 Destaques Técnica
+
+Este repositório não contém apenas exercícios básicos; ele foca em conceitos avançados de engenharia de software:
+
+* **Gerenciamento de Memória:** Implementação de "vaults" usando `malloc` e alocação dinâmica.
+* **Criptografia & Bits:** Manipulação de arquivos via XOR para cifragem de dados.
+* **Resiliência de Sistemas:** Tratamento de sinais (`signal handling`) para desligamento seguro (graceful shutdown).
+* **Refatoração:** Comparação entre código original e refatorado (projeto SmartPark).
+
+## 📂 Estrutura do Projeto
+
+### 🛠️ Módulos Avançados
+* **`04-alocacao-dinamica/`**: Gerenciamento de memória e `vault_malloc.c`.
+* **`05-arquivos-e-bits/`**: Cifra XOR e manipulação de arquivos binários.
+* **`06-sistemas/`**: Interação com o SO e procedimentos de saída por sinais.
+
+### 🧮 Lógica e Algoritmos (Raiz)
+* **`01_calendario_dia_semana.c`**: Cálculo de datas e dias da semana.
+* **`02_contar_bissextos.c`**: Algoritmo otimizado para anos bissextos.
+* **`tabela_conversao_automatizada.c`**: Automação de conversão de dados.
+* **`switch_comportamento_cascata.c`**: Estudo sobre o efeito *fall-through* no switch.
+
+### 🏗️ Projetos e Refatoração
+* **SmartPark**: Versão original vs. Versão refatorada para demonstrar melhoria de código.
+* **`resiliencia_sinais.c`**: Exemplo prático de como tornar programas C resistentes a interrupções bruscas.
+
+## 🛠️ Como Compilar
+
+Como este repositório lida com arquivos e sistemas, use:
+
+```bash
+# Exemplo para compilar com suporte a sinais/threads se necessário
+gcc nome_do_arquivo.c -o programa -Wall
+
+# Para os exercícios de arquivos
+./programa arquivo_entrada.txt
+
 
 
 

@@ -106,46 +106,69 @@ Entendido! Fiz o ajuste para refletir que a seção de Robustez e Arquitetura é
 
 Aqui está a sugestão de como atualizar seu README agora:
 
-📂 Padrões de Robustez e Arquitetura 🚧 Em Construção
-Nesta seção, estou implementando padrões de design que elevam a segurança e a manutenibilidade do código em C.
+Entendido! Atualizei a seção de Engenharia de Produção para refletir que todos os itens estão em desenvolvimento (🚧 Em Construção), mantendo a formatação com cabeçalhos e separadores para o seu README.
 
-Encapsulamento com Ponteiros Opacos
+Aqui está o conteúdo atualizado:
 
-Status: 🚧 Desenvolvendo
+## 📂  Padrões de Robustez e Arquitetura    **🚧 Em Construção**
+1. **Encapsulamento com Ponteiros Opacos**
+Status:🚧 *Desenvolvendo*
 
 Estudo Técnico: Ocultação de Estruturas (Opaque Pointers).
 
-Objetivo: Proteger variáveis sensíveis definindo a struct apenas no arquivo .c, impedindo o acesso direto aos campos e respeitando a Lei de Demeter.
+Descrição: Proteger variáveis sensíveis definindo a struct apenas no arquivo .c.
 
-Gestão de Erros: O Padrão goto cleanup
+Objetivo: Impedir o acesso direto aos campos internos, respeitando a Lei de Demeter e evitando corrupção de estado.
 
-Status: 🚧 Desenvolvendo
+## 2. Gestão de Erros: O Padrão goto cleanup
+Status: 🚧 *Desenvolvendo*
 
 Estudo Técnico: Fluxo de Saída Única (Single Exit Point).
 
-Objetivo: Simular o comportamento de um bloco finally. Centralizar a liberação de recursos para garantir 0 Memory Leaks em qualquer cenário de falha.
+Descrição: Centralizar a liberação de recursos em um único ponto da função.
 
-Objeto Sentinela (Null Object Pattern)
+Objetivo: Garantir 0 Memory Leaks mesmo em funções complexas com múltiplas alocações que podem falhar no meio do processo.
 
-Status: 🚧 Planejado
+## 3. Objeto Sentinela (Null Object Pattern)
+Status: 🚧 *Planejado*
 
 Estudo Técnico: Substituição de Retornos Nulos por instâncias estáticas "Empty".
 
-Objetivo: Reduzir a necessidade de múltiplos if (ptr != NULL) e prevenir falhas de segmentação (Segfaults).
+Descrição: Em vez de retornar NULL, retornar um ponteiro para uma estrutura vazia pré-definida.
 
-Tabelas de Despacho (Ponteiros de Função)
+Objetivo: Eliminar o excesso de verificações if (ptr != NULL) e prevenir falhas de segmentação (Segfaults).
 
-Status: 🚧 Planejado
+## 4. Tabelas de Despacho (Ponteiros de Função)
+**Status**: 🚧 *Planejado*
 
-Estudo Técnico: Extensibilidade e Polimorfismo.
+*Estudo Técnico*: Extensibilidade e Polimorfismo em C.
 
-Objetivo: Aplicar o Open/Closed Principle, permitindo adicionar funcionalidades sem alterar o núcleo do sistema.
+*Descrição*: Substituição de estruturas switch-case gigantes por arrays de funções.
 
-🏗️ Roadmap de Engenharia (Novos Tópicos 2026)
-Módulos adicionais integrados ao meu plano de estudos para dominar a manipulação de dados em baixo nível:
+*Objetivo*: Aplicar o Open/Closed Principle, facilitando a expansão do código sem alterar o núcleo da lógica.
 
-[ ] Manipulação de Vetores Dinâmicos: Criação de um array resiliente com verificação de limites (Bound Checking).
+## 🏗️ Roadmap de Engenharia (Novos Tópicos 2026)
+*Módulos adicionais integrados ao meu plano de estudos para dominar a manipulação de dados em baixo nível.*
 
-[ ] Recursividade Segura: Implementação de algoritmos de busca (Binary Search) focados em controle de Stack.
+[ ] Manipulação de Vetores Dinâmicos: Implementação de um sistema de Bound Checking (verificação de limites) manual para evitar Buffer Overflows.
 
-[ ] Integridade e Hash: Script para gerar a "digital única" de arquivos (ex: protegendo minhas anotações de previsões de sonhos contra alterações).
+[ ] Recursividade Segura: Algoritmos de busca e ordenação focados na proteção da Stack e definição clara de Casos Base.
+
+[ ] Integridade e Hash: Criação de um utilitário de checksum para validar a integridade de arquivos (ex: protegendo minhas anotações de previsões de sonhos contra alterações).
+
+🛡️ Engenharia de Produção (Status Global) 🚧 *Em Construção*
+**Unit Testing (Pasta /tests):** 🚧 *Em Construção*
+
+*Implementação de suítes de teste para validar casos de borda e garantir confiabilidade total.*
+
+**Logging & Observabilidade:** 🚧 *Em Construção*
+
+*Módulo de log com níveis (INFO, WARN, ERROR) e timestamps para monitoramento.*
+
+**Safe Memory Wrappers:** 🚧  *Em Construção*
+
+*Implementação de safe_malloc e safe_free para interceptar falhas de alocação.*
+
+**Documentação Doxygen:** 🚧 *Em Construção*
+
+*Uso do padrão profissional /** ... */ em headers para geração automática de documentação.*

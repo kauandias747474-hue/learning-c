@@ -102,43 +102,50 @@ Competências Testadas e Aplicadas:
 
 * Separação da lógica matemática da função de exibição, um princípio fundamental da engenharia de software.
 
-## 📂 Padrões de Robustez e Arquitetura
+Entendido! Fiz o ajuste para refletir que a seção de Robustez e Arquitetura é o seu foco atual de desenvolvimento (Work in Progress). No mundo do software, ser transparente sobre o que está "em construção" é um sinal de senioridade, pois mostra que você tem um plano de estudo estruturado.
 
-### 1. Encapsulamento com Ponteiros Opacos
-* **O exercício:** Criação de um módulo de "Conta Bancária" ou "Cofre" onde os dados internos são invisíveis para o programa principal.
-* **Estudo Técnico:** Ocultação de Estruturas (Opaque Pointers).
-* **O que aprendi:** Como proteger variáveis sensíveis. Ao definir a `struct` apenas no `.c`, impeço o acesso direto aos campos, respeitando a **Lei de Demeter** e evitando bugs de estado corrompido.
+Aqui está a sugestão de como atualizar seu README agora:
 
-### 2. Gestão de Erros: O Padrão `goto cleanup`
-* **O exercício:** Processador de arquivos que aloca memória e abre múltiplos documentos simultaneamente.
-* **Estudo Técnico:** Fluxo de Saída Única (*Single Exit Point*).
-* **O que aprendi:** Como simular um bloco `finally`. Centralizo a limpeza de recursos no final da função, garantindo **0 Memory Leaks** mesmo em falhas no meio do processo.
+📂 Padrões de Robustez e Arquitetura 🚧 Em Construção
+Nesta seção, estou implementando padrões de design que elevam a segurança e a manutenibilidade do código em C.
 
+Encapsulamento com Ponteiros Opacos
 
+Status: 🚧 Desenvolvendo
 
-### 3. Objeto Sentinela (Null Object Pattern)
-* **O exercício:** Sistema de busca em listas de contatos.
-* **Estudo Técnico:** Substituição de Retornos Nulos por instâncias estáticas "Empty".
-* **O que aprendi:** Como reduzir falhas de segmentação (*Segfaults*) e eliminar o excesso de verificações `if (ptr != NULL)`, tornando o código mais fluido e robusto.
+Estudo Técnico: Ocultação de Estruturas (Opaque Pointers).
 
-### 4. Tabelas de Despacho (Ponteiros de Função)
-* **O exercício:** Substituição de um menu de comandos `switch-case` por um array de ponteiros de função.
-* **Estudo Técnico:** Extensibilidade e Polimorfismo.
-* **O que aprendi:** Como tratar funções como dados. Isso permite adicionar novas funcionalidades sem alterar o código principal (Open/Closed Principle).
+Objetivo: Proteger variáveis sensíveis definindo a struct apenas no arquivo .c, impedindo o acesso direto aos campos e respeitando a Lei de Demeter.
 
+Gestão de Erros: O Padrão goto cleanup
 
+Status: 🚧 Desenvolvendo
 
----
+Estudo Técnico: Fluxo de Saída Única (Single Exit Point).
 
-## 🛡️ Engenharia de Produção (Portfólio Profissional)
+Objetivo: Simular o comportamento de um bloco finally. Centralizar a liberação de recursos para garantir 0 Memory Leaks em qualquer cenário de falha.
 
-* **Unit Testing (Pasta /tests):** Implementação de suítes de teste para validar casos de borda e garantir confiabilidade total do software.
-* **Logging & Observabilidade:** Módulo de log com níveis (`INFO`, `WARN`, `ERROR`) e timestamps para monitoramento e debug em produção.
-* **Safe Memory Wrappers:** Implementação de `safe_malloc` e `safe_free` para interceptar falhas de alocação e prevenir erros fatais.
-* **Documentação Doxygen:** Uso do padrão profissional `/** ... */` em headers para geração automática de documentação técnica.
+Objeto Sentinela (Null Object Pattern)
 
----
+Status: 🚧 Planejado
 
-## ✅ Garantia de Qualidade
-* **Memory Safe:** Todos os módulos validados com **Valgrind** (0 memory leaks).
-* **Compilação Rigorosa:** Uso de flags `-Wall -Wextra -Wpedantic` para garantir o padrão ANSI/ISO C.
+Estudo Técnico: Substituição de Retornos Nulos por instâncias estáticas "Empty".
+
+Objetivo: Reduzir a necessidade de múltiplos if (ptr != NULL) e prevenir falhas de segmentação (Segfaults).
+
+Tabelas de Despacho (Ponteiros de Função)
+
+Status: 🚧 Planejado
+
+Estudo Técnico: Extensibilidade e Polimorfismo.
+
+Objetivo: Aplicar o Open/Closed Principle, permitindo adicionar funcionalidades sem alterar o núcleo do sistema.
+
+🏗️ Roadmap de Engenharia (Novos Tópicos 2026)
+Módulos adicionais integrados ao meu plano de estudos para dominar a manipulação de dados em baixo nível:
+
+[ ] Manipulação de Vetores Dinâmicos: Criação de um array resiliente com verificação de limites (Bound Checking).
+
+[ ] Recursividade Segura: Implementação de algoritmos de busca (Binary Search) focados em controle de Stack.
+
+[ ] Integridade e Hash: Script para gerar a "digital única" de arquivos (ex: protegendo minhas anotações de previsões de sonhos contra alterações).

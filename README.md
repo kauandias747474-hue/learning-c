@@ -128,16 +128,6 @@ Este repositório não contém apenas exercícios básicos; ele foca em conceito
 * **SmartPark**: Versão original vs. Versão refatorada para demonstrar melhoria de código.
 * **`resiliencia_sinais.c`**: Exemplo prático de como tornar programas C resistentes a interrupções bruscas.
 
-## 🛠️ Como Compilar
-
-Como este repositório lida com arquivos e sistemas, use:
-
-```bash
-# Exemplo para compilar com suporte a sinais/threads se necessário
-gcc nome_do_arquivo.c -o programa -Wall
-
-# Para os exercícios de arquivos
-./programa arquivo_entrada.txt
 
 
 

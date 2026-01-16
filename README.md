@@ -120,3 +120,5 @@ Abaixo estão os detalhes sobre os três últimos tópicos que implementei:
 - **O que faz:** Intercepta o sinal de interrupção do teclado (Ctrl+C) para realizar uma limpeza de emergência antes de fechar o programa.
 - **Conceito:** Uso da biblioteca `<signal.h>`, tratamento de interrupções e programação de sistemas.
 - **Localização:** `06-sistemas/signal_handling.c`
+
+📂 Encapsulamento Profissional - Como usar ponteiros opacos para proteger dados.

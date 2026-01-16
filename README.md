@@ -102,77 +102,43 @@ Competências Testadas e Aplicadas:
 
 * Separação da lógica matemática da função de exibição, um princípio fundamental da engenharia de software.
 
-## 📂 Destaques de Aprendizado (Novos Módulos)
-
-Abaixo estão os detalhes sobre os três últimos tópicos que implementei:
-
-### 1. Criptografia de Arquivos (Cifra XOR)
-- **O que faz:** Utiliza a operação lógica `^` (XOR) para processar bytes de um arquivo e gerar uma versão cifrada.
-- **Conceito:** Manipulação de arquivos (`FILE*`), leitura binária (`rb/wb`) e operações bitwise.
-- **Localização:** `05-arquivos-e-bits/cifra_xor.c`
-
-### 2. Gerenciamento de Memória (Vault)
-- **O que faz:** Cria uma estrutura de dados "cofre" (Vault) usando alocação dinâmica.
-- **Conceito:** Uso de `malloc` para reservar memória na **Heap**, ponteiros para structs e a importância do `free` para evitar *memory leaks*.
-- **Localização:** `04-alocacao-dinamica/vault_malloc.c`
-
-### 3. Resiliência e Sinais do Sistema
-- **O que faz:** Intercepta o sinal de interrupção do teclado (Ctrl+C) para realizar uma limpeza de emergência antes de fechar o programa.
-- **Conceito:** Uso da biblioteca `<signal.h>`, tratamento de interrupções e programação de sistemas.
-- **Localização:** `06-sistemas/signal_handling.c`
-
-## 📂 Padrões de Robustez e Arquitetura (Engenharia de Software)
+## 📂 Padrões de Robustez e Arquitetura
 
 ### 1. Encapsulamento com Ponteiros Opacos
 * **O exercício:** Criação de um módulo de "Conta Bancária" ou "Cofre" onde os dados internos são invisíveis para o programa principal.
-* **Estudo Técnico:** Ocultação de Estruturas (struct oculta).
-* **O que aprendi:** Como proteger variáveis sensíveis. Ao definir a `struct` apenas no `.c`, impeço que o utilizador altere valores diretamente, forçando o uso de funções seguras. Isso evita bugs de estado corrompido e respeita a **Lei de Demeter**.
+* **Estudo Técnico:** Ocultação de Estruturas (Opaque Pointers).
+* **O que aprendi:** Como proteger variáveis sensíveis. Ao definir a `struct` apenas no `.c`, impeço o acesso direto aos campos, respeitando a **Lei de Demeter** e evitando bugs de estado corrompido.
 
 ### 2. Gestão de Erros: O Padrão `goto cleanup`
 * **O exercício:** Processador de arquivos que aloca memória e abre múltiplos documentos simultaneamente.
 * **Estudo Técnico:** Fluxo de Saída Única (*Single Exit Point*).
-* **O que aprendi:** Como simular um bloco `finally`. Centralizo a limpeza de recursos (memória e arquivos) no final da função, garantindo **0 Memory Leaks** mesmo quando ocorrem erros no meio do processo.
+* **O que aprendi:** Como simular um bloco `finally`. Centralizo a limpeza de recursos no final da função, garantindo **0 Memory Leaks** mesmo em falhas no meio do processo.
 
 
 
 ### 3. Objeto Sentinela (Null Object Pattern)
-* **O exercício:** Sistema de busca em listas de contatos ou base de dados.
-* **Estudo Técnico:** Substituição de Retornos Nulos.
-* **O que aprendi:** Retornar `NULL` causa crashes (*Segfaults*). Aprendi a retornar um ponteiro para um objeto "Vazio" constante, permitindo que o programa continue a rodar sem precisar de verificações `if` excessivas.
+* **O exercício:** Sistema de busca em listas de contatos.
+* **Estudo Técnico:** Substituição de Retornos Nulos por instâncias estáticas "Empty".
+* **O que aprendi:** Como reduzir falhas de segmentação (*Segfaults*) e eliminar o excesso de verificações `if (ptr != NULL)`, tornando o código mais fluido e robusto.
 
-### 4. Tabelas de Despacho (Dispatch Tables)
-* **O exercício:** Substituição de um menu de comandos com `switch-case` por um array de ponteiros de função.
-* **Estudo Técnico:** Extensibilidade e Polimorfismo em C.
-* **O que aprendi:** Como tratar funções como dados. Isso permite adicionar novas funcionalidades ao sistema sem alterar o código principal, mantendo as funções pequenas e especializadas.
+### 4. Tabelas de Despacho (Ponteiros de Função)
+* **O exercício:** Substituição de um menu de comandos `switch-case` por um array de ponteiros de função.
+* **Estudo Técnico:** Extensibilidade e Polimorfismo.
+* **O que aprendi:** Como tratar funções como dados. Isso permite adicionar novas funcionalidades sem alterar o código principal (Open/Closed Principle).
 
 
-
----
-
-## 🧪 Estudos Técnicos e Exercícios de Lógica
-
-### 1. Calendário: Cálculo do Dia da Semana
-* **Estudo:** Comportamento Cascata (*Fall-through*) no `switch`.
-* **O que aprendi:** Como o compilador executa o fluxo sequencial e como tirar proveito disso para lógica de datas pós-1600.
-
-### 2. Contador de Bissextos Otimizado
-* **Estudo:** Aritmética de Tempo Constante $O(1)$.
-* **O que aprendi:** Substituir laços de repetição (for/while) por fórmulas matemáticas diretas, otimizando o processamento. Fórmula: `(X/4)−(X/100)+(X/400)`.
-
-### 3. SmartPark: Sistema de Estacionamento
-* **Foco:** Normalização de dados (conversão para minutos totais) e tratamento de exceções em lógica de negócios (virada do dia).
 
 ---
 
-## 🛡️ Qualidade e Profissionalização (Freela & Mercado)
+## 🛡️ Engenharia de Produção (Portfólio Profissional)
 
-* **Logging System:** Implementação de logs com níveis (`INFO`, `WARN`, `ERROR`) para monitoramento em produção.
-* **Safe Memory Wrappers:** Funções `safe_malloc` que verificam falhas de alocação e interrompem o programa de forma controlada.
-* **Unit Testing:** Pasta `/tests` dedicada a validar casos de borda e garantir a confiabilidade das funções matemáticas.
-* **Doxygen Documentation:** Código comentado no padrão profissional para geração automática de manuais técnicos.
+* **Unit Testing (Pasta /tests):** Implementação de suítes de teste para validar casos de borda e garantir confiabilidade total do software.
+* **Logging & Observabilidade:** Módulo de log com níveis (`INFO`, `WARN`, `ERROR`) e timestamps para monitoramento e debug em produção.
+* **Safe Memory Wrappers:** Implementação de `safe_malloc` e `safe_free` para interceptar falhas de alocação e prevenir erros fatais.
+* **Documentação Doxygen:** Uso do padrão profissional `/** ... */` em headers para geração automática de documentação técnica.
 
 ---
 
 ## ✅ Garantia de Qualidade
-* **Memory Safe:** Todos os módulos são validados com **Valgrind** (0 leaks).
+* **Memory Safe:** Todos os módulos validados com **Valgrind** (0 memory leaks).
 * **Compilação Rigorosa:** Uso de flags `-Wall -Wextra -Wpedantic` para garantir o padrão ANSI/ISO C.

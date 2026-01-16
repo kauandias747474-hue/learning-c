@@ -121,7 +121,10 @@ Abaixo estão os detalhes sobre os três últimos tópicos que implementei:
 - **Conceito:** Uso da biblioteca `<signal.h>`, tratamento de interrupções e programação de sistemas.
 - **Localização:** `06-sistemas/signal_handling.c`
 
-📂 Padrões de Robustez e Arquitetura
+## 📂 Padrões de Robustez e Arquitetura
+
+Aqui abaixo estão também os detalhes sobre os padrões de robustez e arquitetura 
+
 1. Encapsulamento com Ponteiros Opacos
 - **O exercício:** Criar um módulo de "Conta Bancária" ou "Perfil de Usuário" onde os dados internos são invisíveis para o programa principal.
 

@@ -111,7 +111,7 @@ Entendido! Atualizei a seção de Engenharia de Produção para refletir que tod
 Aqui está o conteúdo atualizado:
 
 ## 📂  Padrões de Robustez e Arquitetura    **🚧 Em Construção**
-1. **Encapsulamento com Ponteiros Opacos**
+## 1. **Encapsulamento com Ponteiros Opacos**
 Status:🚧 *Desenvolvendo*
 
 Estudo Técnico: Ocultação de Estruturas (Opaque Pointers).

@@ -102,11 +102,6 @@ Competências Testadas e Aplicadas:
 
 * Separação da lógica matemática da função de exibição, um princípio fundamental da engenharia de software.
 
-Entendido! Fiz o ajuste para refletir que a seção de Robustez e Arquitetura é o seu foco atual de desenvolvimento (Work in Progress). No mundo do software, ser transparente sobre o que está "em construção" é um sinal de senioridade, pois mostra que você tem um plano de estudo estruturado.
-
-Aqui está a sugestão de como atualizar seu README agora:
-
-Entendido! Atualizei a seção de Engenharia de Produção para refletir que todos os itens estão em desenvolvimento (🚧 Em Construção), mantendo a formatação com cabeçalhos e separadores para o seu README.
 
 Aqui está o conteúdo atualizado:
 

@@ -142,6 +142,6 @@ Estudo Técnico: Ocultação de Estruturas (struct oculta).
 3. Objeto Sentinela (Null Object Pattern)
 - **O exercício:** Sistema de busca em uma lista de contatos.
 
-_ **Estudo Técnico:** Substituição de Retornos Nulos.
+- **Estudo Técnico:** Substituição de Retornos Nulos.
 
 - *O que aprendi: Retornar NULL muitas vezes causa crashes inesperados. Aprendi a retornar um ponteiro para um objeto "Vazio" constante. Assim, o código que chama a função pode continuar rodando sem precisar de um if (resultado != NULL) a cada linha.*

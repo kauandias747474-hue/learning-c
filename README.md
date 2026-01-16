@@ -121,4 +121,24 @@ Abaixo estão os detalhes sobre os três últimos tópicos que implementei:
 - **Conceito:** Uso da biblioteca `<signal.h>`, tratamento de interrupções e programação de sistemas.
 - **Localização:** `06-sistemas/signal_handling.c`
 
-📂 Encapsulamento Profissional - Como usar ponteiros opacos para proteger dados.
+📂 Padrões de Robustez e Arquitetura
+1. Encapsulamento com Ponteiros Opacos
+- **O exercício:** Criar um módulo de "Conta Bancária" ou "Perfil de Usuário" onde os dados internos são invisíveis para o programa principal.
+
+Estudo Técnico: Ocultação de Estruturas (struct oculta).
+
+- *O que aprendi: Como proteger variáveis sensíveis em C. Ao definir a struct apenas no .c, impeço que o usuário do meu código altere valores diretamente, forçando o uso de funções seguras. Isso evita bugs de estado corrompido.*
+
+2. Gestão de Erros: O Padrão goto cleanup
+- **O exercício:** Criar um processador de arquivos que precisa alocar memória e abrir múltiplos documentos simultaneamente.
+
+- **Estudo Técnico:** Fluxo de Saída Única (Single Exit Point).
+
+- *O que aprendi: Como simular o comportamento de um bloco finally. Em vez de espalhar free() por todo o código em cada if, centralizo a limpeza no final. Isso torna o código mais limpo e garante que nenhum byte de memória seja esquecido (Memory Leak).*
+
+3. Objeto Sentinela (Null Object Pattern)
+- **O exercício:** Sistema de busca em uma lista de contatos.
+
+_ **Estudo Técnico:** Substituição de Retornos Nulos.
+
+- *O que aprendi: Retornar NULL muitas vezes causa crashes inesperados. Aprendi a retornar um ponteiro para um objeto "Vazio" constante. Assim, o código que chama a função pode continuar rodando sem precisar de um if (resultado != NULL) a cada linha.*

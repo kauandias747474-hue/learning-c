@@ -194,3 +194,19 @@ Objetivo: Eliminar o excesso de verificações if (ptr != NULL) e prevenir falha
 **Documentação Doxygen:** 🚧 *Em Construção*
 
 *Uso do padrão profissional /** ... */ em headers para geração automática de documentação.*
+
+
+
+
+
+
+## 🛠️ Como Compilar
+
+Como este repositório lida com arquivos e sistemas, use:
+
+```bash
+# Exemplo para compilar com suporte a sinais/threads se necessário
+gcc nome_do_arquivo.c -o programa -Wall
+
+# Para os exercícios de arquivos
+./programa arquivo_entrada.txt

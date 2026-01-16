@@ -102,7 +102,7 @@ Competências Testadas e Aplicadas:
 
 * Separação da lógica matemática da função de exibição, um princípio fundamental da engenharia de software.
 
-* ## 🚀 Destaques Técnica
+* ## 🚀 Destaques Técnicos
 
 Este repositório não contém apenas exercícios básicos; ele foca em conceitos avançados de engenharia de software:
 

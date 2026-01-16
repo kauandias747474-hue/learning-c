@@ -121,27 +121,58 @@ Abaixo estão os detalhes sobre os três últimos tópicos que implementei:
 - **Conceito:** Uso da biblioteca `<signal.h>`, tratamento de interrupções e programação de sistemas.
 - **Localização:** `06-sistemas/signal_handling.c`
 
-## 📂 Padrões de Robustez e Arquitetura
+## 📂 Padrões de Robustez e Arquitetura (Engenharia de Software)
 
-Aqui abaixo estão também os detalhes sobre os padrões de robustez e arquitetura 
+### 1. Encapsulamento com Ponteiros Opacos
+* **O exercício:** Criação de um módulo de "Conta Bancária" ou "Cofre" onde os dados internos são invisíveis para o programa principal.
+* **Estudo Técnico:** Ocultação de Estruturas (struct oculta).
+* **O que aprendi:** Como proteger variáveis sensíveis. Ao definir a `struct` apenas no `.c`, impeço que o utilizador altere valores diretamente, forçando o uso de funções seguras. Isso evita bugs de estado corrompido e respeita a **Lei de Demeter**.
 
-1. Encapsulamento com Ponteiros Opacos
-- **O exercício:** Criar um módulo de "Conta Bancária" ou "Perfil de Usuário" onde os dados internos são invisíveis para o programa principal.
+### 2. Gestão de Erros: O Padrão `goto cleanup`
+* **O exercício:** Processador de arquivos que aloca memória e abre múltiplos documentos simultaneamente.
+* **Estudo Técnico:** Fluxo de Saída Única (*Single Exit Point*).
+* **O que aprendi:** Como simular um bloco `finally`. Centralizo a limpeza de recursos (memória e arquivos) no final da função, garantindo **0 Memory Leaks** mesmo quando ocorrem erros no meio do processo.
 
-Estudo Técnico: Ocultação de Estruturas (struct oculta).
 
-- *O que aprendi: Como proteger variáveis sensíveis em C. Ao definir a struct apenas no .c, impeço que o usuário do meu código altere valores diretamente, forçando o uso de funções seguras. Isso evita bugs de estado corrompido.*
 
-2. Gestão de Erros: O Padrão goto cleanup
-- **O exercício:** Criar um processador de arquivos que precisa alocar memória e abrir múltiplos documentos simultaneamente.
+### 3. Objeto Sentinela (Null Object Pattern)
+* **O exercício:** Sistema de busca em listas de contatos ou base de dados.
+* **Estudo Técnico:** Substituição de Retornos Nulos.
+* **O que aprendi:** Retornar `NULL` causa crashes (*Segfaults*). Aprendi a retornar um ponteiro para um objeto "Vazio" constante, permitindo que o programa continue a rodar sem precisar de verificações `if` excessivas.
 
-- **Estudo Técnico:** Fluxo de Saída Única (Single Exit Point).
+### 4. Tabelas de Despacho (Dispatch Tables)
+* **O exercício:** Substituição de um menu de comandos com `switch-case` por um array de ponteiros de função.
+* **Estudo Técnico:** Extensibilidade e Polimorfismo em C.
+* **O que aprendi:** Como tratar funções como dados. Isso permite adicionar novas funcionalidades ao sistema sem alterar o código principal, mantendo as funções pequenas e especializadas.
 
-- *O que aprendi: Como simular o comportamento de um bloco finally. Em vez de espalhar free() por todo o código em cada if, centralizo a limpeza no final. Isso torna o código mais limpo e garante que nenhum byte de memória seja esquecido (Memory Leak).*
 
-3. Objeto Sentinela (Null Object Pattern)
-- **O exercício:** Sistema de busca em uma lista de contatos.
 
-- **Estudo Técnico:** Substituição de Retornos Nulos.
+---
 
-- *O que aprendi: Retornar NULL muitas vezes causa crashes inesperados. Aprendi a retornar um ponteiro para um objeto "Vazio" constante. Assim, o código que chama a função pode continuar rodando sem precisar de um if (resultado != NULL) a cada linha.*
+## 🧪 Estudos Técnicos e Exercícios de Lógica
+
+### 1. Calendário: Cálculo do Dia da Semana
+* **Estudo:** Comportamento Cascata (*Fall-through*) no `switch`.
+* **O que aprendi:** Como o compilador executa o fluxo sequencial e como tirar proveito disso para lógica de datas pós-1600.
+
+### 2. Contador de Bissextos Otimizado
+* **Estudo:** Aritmética de Tempo Constante $O(1)$.
+* **O que aprendi:** Substituir laços de repetição (for/while) por fórmulas matemáticas diretas, otimizando o processamento. Fórmula: `(X/4)−(X/100)+(X/400)`.
+
+### 3. SmartPark: Sistema de Estacionamento
+* **Foco:** Normalização de dados (conversão para minutos totais) e tratamento de exceções em lógica de negócios (virada do dia).
+
+---
+
+## 🛡️ Qualidade e Profissionalização (Freela & Mercado)
+
+* **Logging System:** Implementação de logs com níveis (`INFO`, `WARN`, `ERROR`) para monitoramento em produção.
+* **Safe Memory Wrappers:** Funções `safe_malloc` que verificam falhas de alocação e interrompem o programa de forma controlada.
+* **Unit Testing:** Pasta `/tests` dedicada a validar casos de borda e garantir a confiabilidade das funções matemáticas.
+* **Doxygen Documentation:** Código comentado no padrão profissional para geração automática de manuais técnicos.
+
+---
+
+## ✅ Garantia de Qualidade
+* **Memory Safe:** Todos os módulos são validados com **Valgrind** (0 leaks).
+* **Compilação Rigorosa:** Uso de flags `-Wall -Wextra -Wpedantic` para garantir o padrão ANSI/ISO C.

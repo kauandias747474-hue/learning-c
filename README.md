@@ -1,4 +1,4 @@
-# Learning C 🚀
+# C Systems Engineering 🚀
  <p align="left">
    <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&=c&Color=white"  />
 </p> 

@@ -59,7 +59,7 @@
 **PT:** Todo o código aqui tem fins educativos de engenharia, focado em resolver problemas complexos com o mínimo de uso de recursos.
 
 ---
----
+
 ## 👨‍💻 Author & Engineering Mindset | Autoria e Engenharia
 **Kauan Oliveira** - *Systems & Security Engineer*
 

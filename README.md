@@ -59,6 +59,25 @@
 **PT:** Todo o código aqui tem fins educativos de engenharia, focado em resolver problemas complexos com o mínimo de uso de recursos.
 
 ---
-<p align="center">
-  <i>"Measure twice, cut once. Engineer your code."</i>
-</p>
+---
+## 👨‍💻 Author & Engineering Mindset | Autoria e Engenharia
+**Kauan Oliveira** - *Systems & Security Engineer*
+
+![C Systems](https://img.shields.io/badge/C-Systems-A8B9CC?style=for-the-badge&logo=c&logoColor=white)
+![Binary Analysis](https://img.shields.io/badge/Binary-Analysis-blue?style=for-the-badge)
+![Memory Research](https://img.shields.io/badge/Memory-Research-red?style=for-the-badge)
+
+**PT-BR:** Desenvolvimento e pesquisa onde o software encontra o silício. A metodologia utiliza mapeamento de memória em papel A4 para identificar offsets de buffers e registradores, focando na prevenção de falhas de corrupção e análise forense dinâmica.
+
+**EN-US:** Development and research where software meets silicon. The methodology uses memory mapping on A4 paper to identify buffer and register offsets, focusing on corruption failure prevention and dynamic forensic analysis.
+
+### 🎯 Objective
+Atualmente focado em **Freelance de Alta Performance** e **Pesquisa em Bug Bounty**. 
+
+### 📩 Connect with Me
+- **LinkedIn:** [Kauan Oliveira](https://www.linkedin.com/in/kauan-oliveira-324264378/)
+- **Bug Bounty Portfolio:** [HackerOne/Profile]
+- **Professional Email:** [Seu Email]
+---
+*Developed in 2026 by Kauan Oliveira / Feito em 2026 por Kauan Oliveira*
+

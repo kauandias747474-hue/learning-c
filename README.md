@@ -35,6 +35,8 @@
 
 | Folder / File | Technical Focus (EN) | Foco Técnico (PT) |
 | :--- | :--- | :--- |
+| `01_calendario.c` | Date logic & Zeller's Congruence | Lógica de datas e Congruência de Zeller |
+| `02_bissextos.c` | Modular arithmetic & Time cycles | Aritmética modular e Ciclos de tempo |
 | `04-alocacao-dinamica/` | Heap management & Malloc/Free | Gestão de Heap e Malloc/Free |
 | `05-arquivos-e-bits/` | Binary I/O & Bitwise operations | I/O Binário e operações de Bits |
 | `06-sistemas/` | System-level interactions | Interações em nível de sistema |

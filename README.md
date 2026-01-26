@@ -38,11 +38,27 @@
 | `04-alocacao-dinamica/` | Heap management & Malloc/Free | Gestão de Heap e Malloc/Free |
 | `05-arquivos-e-bits/` | Binary I/O & Bitwise operations | I/O Binário e operações de Bits |
 | `06-sistemas/` | System-level interactions | Interações em nível de sistema |
-| `smartpark/` | Real-world logic & Refactoring | Lógica real e Refatoração |
-| `C-Programming-Language/` | Language fundamentals | Fundamentos da linguagem |
-
+| `07-estruturas-criticas/`| Secure Data Structures & Canaries | Estruturas de Dados Seguras e Canários |
+| `08-auditoria-memoria/` | Memory Leak Detection & Auditing | Detecção de Vazamentos e Auditoria |
+| `09-sockets-low-level/` | Binary Network Packets & Sockets | Pacotes de Rede Binários e Sockets |
+| `10-multithreading/`    | Parallel Performance & Mutex | Performance Paralela e Mutex |
+| `11-cripto-bitwise/`   | File Shredding & XOR Ciphers | Destruição de Arquivos e Cifras XOR |
+| `smartpark/`           | Real-world logic & Refactoring | Lógica real e Refatoração |
+| `shared/include/`      | Global Architecture Headers | Headers de Arquitetura Global |
 ---
+## 🔬 Advanced Research Areas | Áreas de Pesquisa Avançada
 
+### 🛡️ Defensive Engineering (Folders 07 & 08)
+- **Goal:** Implementing data structures with integrity checks (Canary values) to prevent buffer overflows and memory corruption.
+- **PT:** Implementação de estruturas de dados com checagem de integridade (valores Canário) para prevenir buffer overflows e corrupção de memória.
+
+### ⚡ High-Performance Computing (Folders 09 & 10)
+- **Goal:** Scaling algorithms to $O(n)$ using multithreading and optimizing binary data flow through network sockets.
+- **PT:** Escalando algoritmos para $O(n)$ usando multithreading e otimizando o fluxo de dados binários via sockets de rede.
+
+### 🔐 Binary Sovereignty (Folder 11)
+- **Goal:** Mastering bitwise operators for data encryption and secure permanent deletion (shredding).
+- **PT:** Domínio de operadores bitwise para criptografia de dados e deleção permanente segura (shredding).
 ## 🛠️ Tooling & Standards | Ferramentas e Padrões
 
 **EN:** Developing a rigorous workflow to ensure high-quality systems code:
